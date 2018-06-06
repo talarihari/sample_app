@@ -1,2 +1,8 @@
 <h1> Welcome, please login to continue </h1>
+<% if member_signed_in? %>
+	<%= current_member.email %>
+	<h3><%= link_to "Sign Out",destroy_member_session_path %>
+<% else %>
+<p><%= link_to "Sign Up",new_member_registration_path %></p>
 <a href="/auth/google_oauth2">Sign in with Google</a>
+<% end %>

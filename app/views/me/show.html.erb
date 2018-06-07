@@ -5,11 +5,11 @@
 	<% current_user.attributes.each do |k, v| %>
 		<b><%= k %>:</b> <%= v %> <br>
 	<% end %><br><br>
-<strong>You have signed with google</strong>
+<h3>You have signed with <strong>Google</strong></h3>
 
 <% end %>
 </table>
 
 
-<h1><%= link_to "LogOut",sessions_destroy_path %></h1>
+<h1><%= link_to "LogOut",sessions_destroy_path,:class => 'btn btn-large btn-danger' %></h1>
 </div>
